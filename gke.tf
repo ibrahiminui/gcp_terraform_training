@@ -1,4 +1,4 @@
-
+## GKE Cluster
 module "us-west2-gke-cluster" {
   source                = "./modules/gke-cluster"
   cluster-name          = "us-west2-gke-cluster"
@@ -8,6 +8,7 @@ module "us-west2-gke-cluster" {
   shared-vpc-network    = google_compute_network.vpc_network.id
 }
 
+## Node Pool for GKE Cluster
 resource "google_container_node_pool" "us-west2-gke-node-pool" {
   name       = "us-west2-gke-node-pool"
   location   = var.region
