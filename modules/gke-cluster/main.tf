@@ -24,8 +24,8 @@ resource "google_container_cluster" "us-west2-gke-cluster" {
   */
 
   ip_allocation_policy {
-    cluster_secondary_range_name  = "gke-us-west2-subnet-pods"
-    services_secondary_range_name = "gke-us-west2-subnet-services"
+    cluster_secondary_range_name  = "gke-pods-range"
+    services_secondary_range_name = "gke-services-range"
   }
 
   /*
