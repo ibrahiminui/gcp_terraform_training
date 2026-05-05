@@ -34,12 +34,12 @@ resource "google_compute_subnetwork" "gke_app_subnetwork" {
   # Secondary ranges for GKE
   secondary_ip_range {
     range_name    = "gke-pods-range"
-    ip_cidr_range = "10.2.0.0/16"
+    ip_cidr_range = "10.5.0.0/16"
   }
 
   secondary_ip_range {
     range_name    = "gke-services-range"
-    ip_cidr_range = "10.3.0.0/20"
+    ip_cidr_range = "10.6.0.0/20"
   }
 }
 
