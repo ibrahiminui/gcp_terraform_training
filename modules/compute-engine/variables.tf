@@ -43,5 +43,5 @@ variable "enable_oslogin" {
 variable "subnetwork_name" {
   description = "subnetwork name"
   type        = string
-  
+
 }

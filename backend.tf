@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "tolu-training-statefile"
-    prefix  = "terraform/state"
+    bucket = "tolu-training-statefile"
+    prefix = "terraform/state"
   }
 }
