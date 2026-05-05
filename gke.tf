@@ -1,6 +1,6 @@
 
 module "us-west2-gke-cluster" {
-  source                = "./modules/cluster-name"
+  source                = "./modules/gke-cluster"
   cluster-name          = "us-west2-gke-cluster"
   gke-project           = "global-web-server-473500"
   region                = "us-west2"
