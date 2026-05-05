@@ -3,7 +3,7 @@ module "us-west2-gke-cluster" {
   source                = "./modules/gke-cluster"
   cluster-name          = "us-west2-gke-cluster"
   gke-project           = "global-web-server-473500"
-  region                = "us-west2"
+  region                = var.region
   shared-vpc-subnetwork = google_compute_network.vpc_network.id
   shared-vpc-network    = google_compute_subnetwork.gke_app_subnetwork.id
 }
