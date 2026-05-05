@@ -4,8 +4,8 @@ module "us-west2-gke-cluster" {
   cluster-name          = "us-west2-gke-cluster"
   gke-project           = "global-web-server-473500"
   region                = var.region
-  shared-vpc-subnetwork = google_compute_network.vpc_network.id
-  shared-vpc-network    = google_compute_subnetwork.gke_app_subnetwork.id
+  shared-vpc-subnetwork = google_compute_subnetwork.gke_app_subnetwork.id
+  shared-vpc-network    = google_compute_network.vpc_network.id
 }
 
 resource "google_container_node_pool" "us-west2-gke-node-pool" {
