@@ -23,10 +23,10 @@ resource "google_compute_subnetwork" "tolu_app_subnetwork" {
 }
 
 resource "google_compute_subnetwork" "gke_app_subnetwork" {
-  name                     = "app-subnetwork"
-  project                  = var.project_id
-  region                   = var.region
-  network                  = google_compute_network.vpc_network.id
+  name    = "app-subnetwork"
+  project = var.project_id
+  region  = var.region
+  network = google_compute_network.vpc_network.id
 
   ip_cidr_range            = "10.3.0.0/16"
   private_ip_google_access = var.private_ip_google_access
