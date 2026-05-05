@@ -23,7 +23,7 @@ resource "google_compute_subnetwork" "tolu_app_subnetwork" {
 }
 
 resource "google_compute_subnetwork" "gke_app_subnetwork" {
-  name    = "app-subnetwork"
+  name    = "gke-app-subnetwork"
   project = var.project_id
   region  = var.region
   network = google_compute_network.vpc_network.id
