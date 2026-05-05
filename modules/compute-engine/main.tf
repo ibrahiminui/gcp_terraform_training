@@ -13,7 +13,7 @@ resource "google_compute_instance" "vm" {
   }
 
   network_interface {
-    network = var.network_id
+    network    = var.network_id
     subnetwork = var.subnetwork_name
 
     access_config {
