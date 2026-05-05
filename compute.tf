@@ -1,3 +1,5 @@
+/*
+
 module "compute_vm" {
   source          = "./modules/compute-engine"
   name            = "training-vm"
@@ -12,7 +14,6 @@ module "compute_vm" {
   subnetwork_name = google_compute_subnetwork.tolu_subnetwork.id
 }
 
-/*
 module "compute_app_vm" {
   source          = "./modules/compute-engine"
   name            = "training-app-vm"
