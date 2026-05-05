@@ -22,6 +22,27 @@ resource "google_compute_subnetwork" "tolu_app_subnetwork" {
   private_ip_google_access = var.private_ip_google_access
 }
 
+resource "google_compute_subnetwork" "gke_app_subnetwork" {
+  name    = "app-subnetwork"
+  project = var.project_id
+  region  = var.region
+  network = google_compute_network.vpc_network.id
+
+  ip_cidr_range            = "10.3.0.0/16"
+  private_ip_google_access = var.private_ip_google_access
+
+  # Secondary ranges for GKE
+  secondary_ip_range {
+    range_name    = "gke-pods-range"
+    ip_cidr_range = "10.2.0.0/16"
+  }
+
+  secondary_ip_range {
+    range_name    = "gke-services-range"
+    ip_cidr_range = "10.3.0.0/20"
+  }
+}
+
 resource "google_compute_router" "nat_router" {
   name    = "nat-router"
   project = var.project_id
