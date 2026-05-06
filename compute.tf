@@ -1,5 +1,5 @@
 
-
+/*
 module "compute_vm" {
   source          = "./modules/compute-engine"
   name            = "training-vm"
@@ -42,3 +42,5 @@ module "statefile_app_vm" {
   project_id      = "global-web-server-473500"
   subnetwork_name = google_compute_subnetwork.tolu_subnetwork.id
 }
+
+*/
